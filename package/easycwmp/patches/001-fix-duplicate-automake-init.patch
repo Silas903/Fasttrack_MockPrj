@@ -1,0 +1,21 @@
+--- a/configure.ac
++++ b/configure.ac
+@@ -1,7 +1,5 @@
+ AC_INIT([easycwmpd], [1.8.6], [mohamed.kallel@pivasoftware.com])
+-AM_INIT_AUTOMAKE
+ AC_CONFIG_SRCDIR([src/easycwmp.c])
+-
+ AM_INIT_AUTOMAKE([subdir-objects])
+ 
+ AC_ARG_ENABLE(jsonc, [AS_HELP_STRING([--enable-jsonc], [build with jsonc])], [
+--- a/src/cwmp.h
++++ b/src/cwmp.h
+@@ -142,7 +142,7 @@ struct cwmp_internal {
+ };
+ 
+ extern struct cwmp_internal *cwmp;
+-struct event_code event_code_array[__EVENT_MAX];
++extern struct event_code event_code_array[__EVENT_MAX];
+ 
+ static void cwmp_periodic_inform(struct uloop_timeout *timeout);
+ static void cwmp_do_inform(struct uloop_timeout *timeout);
