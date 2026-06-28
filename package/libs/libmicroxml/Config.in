@@ -1,0 +1,5 @@
+config PACKAGE_libmicroxml
+	bool "libmicroxml"
+	help
+	  Tiny XML parsing library required by easycwmp.
+	  This package provides the microxml library and pkg-config file.
